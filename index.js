@@ -82,10 +82,10 @@ do{
                     continue;
                 }
 
-                if((bookCount > 0) && (pricePerBook > 0) && (bookCount % 1 === 0) && (pricePerBook % 1 === 0)){
-                    console.log("Vui lòng nhập số nguyên và lớn hơn 0!");
-                    continue;
-                }
+                // if((bookCount > 0) && (pricePerBook > 0) && (bookCount % 1 === 0) && (pricePerBook % 1 === 0)){
+                //     console.log("Vui lòng nhập số nguyên và lớn hơn 0!");
+                //     continue;
+                // }
 
                 if(bookCount === null && pricePerBook === null){
                     console.log("Vui lòng hủy giao dịch hay Cancel");
@@ -130,7 +130,16 @@ do{
             break;
 
         case "0":
-            
+            let report = `
+===================================
+    BÁO CÁO TỔNG KẾT CA BÁN HÀNG
+===================================
+    `
+            console.log(report);
+            console.log("Tổng số đơn hàng đã thanh toán: ", totalOrder);
+            console.log("Tổng doanh thu: ", totalrevenue, "VND")
+            console.log("Doanh thu trung bình: ", totalrevenue / totalOrder, "VND")
+            console.log("===================================")
             console.log("Kết thúc chương trình:");
             isRunning = false;
             break;
